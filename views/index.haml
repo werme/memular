@@ -16,7 +16,7 @@
           %li
             %a{:href => "#", "ng-click" => "selectAll()"} All
           %li{"ng-repeat" => "list in lists"}
-            %a{:href => "#", "ng-click" => "selectList(list.title)"}
+            %a{:href => "#", "ng-click" => "selectList(list.title)", "ng-class" => "{selected: list.title == currentList}" }
               {{list.title}}
               %i.glyphicon.glyphicon-trash.delete-button{"ng-click" => "removeList(list.id)"}
 

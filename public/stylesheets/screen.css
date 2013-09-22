@@ -171,6 +171,10 @@ label {
   opacity: 1;
 }
 /* line 106, ../sass/screen.scss */
+.menu ul li a.selected {
+  background: rgba(255, 255, 255, 0.1);
+}
+/* line 108, ../sass/screen.scss */
 .menu ul li .delete-button {
   position: absolute;
   right: 1em;
@@ -180,11 +184,11 @@ label {
   color: #008df0;
   transition: all 0.2s;
 }
-/* line 115, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .menu ul li .delete-button:hover {
   color: red;
 }
-/* line 120, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .menu .menu-button {
   position: absolute;
   display: inline-block;
@@ -192,16 +196,16 @@ label {
   padding: 0.6em 0.8em;
   color: #008df0;
 }
-/* line 126, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .menu .menu-button:hover {
   color: #00518a;
 }
-/* line 129, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .menu .new-list-button {
   margin: 0.8em 0 0 2rem;
   font-size: 0.8em;
 }
-/* line 134, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .menu input {
   width: 100%;
   border: 0;
@@ -211,12 +215,12 @@ label {
   background: #333;
 }
 
-/* line 143, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 .show-menu {
   left: 0;
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 footer {
   color: #333;
   text-align: center;

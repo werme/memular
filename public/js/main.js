@@ -17,6 +17,7 @@ function MainCtrl($scope, $http) {
 
   $scope.selectList = function(title) {
     $scope.currentList = title;
+    toggleListActive();
     $http.get('/list/' + title).success(function(data) {
        $scope.nodes = data;
     });
@@ -54,7 +55,7 @@ function MainCtrl($scope, $http) {
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     }).success(function(data) {
       $scope.updateLists();
-      $scope.selectList(data.title)
+      $scope.selectList(data.title);
     }).error(function() {});
     $scope.newList = '';
     $('#new-list-input').blur();
@@ -84,6 +85,12 @@ function MainCtrl($scope, $http) {
     } else {
       $('.word-input').focus();
     }
+  };
+
+  var toggleListActive = function() {
+    $scope.lists.forEach(function(list) {
+        console.log(list);
+    });
   };
 
   $(document).jkey('m',function(){
