@@ -1,0 +1,225 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 10, ../sass/screen.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 12, ../sass/screen.scss */
+body {
+  font-family: 'proxima-nova';
+  font-size: 200%;
+}
+
+/* line 17, ../sass/screen.scss */
+a {
+  color: #008df0;
+}
+
+/* line 19, ../sass/screen.scss */
+.container {
+  width: 480px;
+  padding: 1em 0 0;
+}
+
+/* line 24, ../sass/screen.scss */
+h1 {
+  font-family: 'proxima-nova';
+  font-weight: 100;
+}
+
+/* line 29, ../sass/screen.scss */
+header {
+  padding: 1em 0;
+}
+/* line 31, ../sass/screen.scss */
+header h1 {
+  font-size: 4.4em;
+  text-align: center;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+
+/* line 34, ../sass/screen.scss */
+.group {
+  margin-bottom: 1em;
+  position: relative;
+}
+/* line 38, ../sass/screen.scss */
+.group input {
+  padding: 0.6em;
+  font-size: 16px;
+  height: 36px;
+}
+/* line 40, ../sass/screen.scss */
+.group .word-input {
+  width: 29.5%;
+  margin-right: 1%;
+}
+/* line 41, ../sass/screen.scss */
+.group .note-input {
+  width: 69.5%;
+}
+/* line 43, ../sass/screen.scss */
+.group span {
+  display: block;
+  position: absolute;
+  right: -36px;
+  padding: 0.1em;
+  font-size: 1.2em;
+}
+/* line 44, ../sass/screen.scss */
+.group input[type="submit"] {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* line 47, ../sass/screen.scss */
+label {
+  font-weight: normal;
+}
+
+/* line 49, ../sass/screen.scss */
+.list {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+  overflow: hidden;
+  width: 100%;
+  border-collapse: separate !important;
+}
+/* line 59, ../sass/screen.scss */
+.list td {
+  vertical-align: top;
+}
+/* line 60, ../sass/screen.scss */
+.list .even {
+  background: #fbfbfb;
+}
+/* line 61, ../sass/screen.scss */
+.list .word, .list .note {
+  padding: 0.4em;
+}
+/* line 62, ../sass/screen.scss */
+.list .word {
+  width: 30%;
+  text-align: right;
+  border-right: 1px dotted #ddd;
+  color: #008df0;
+}
+/* line 63, ../sass/screen.scss */
+.list .note {
+  width: 70%;
+}
+/* line 65, ../sass/screen.scss */
+.list tr:hover {
+  background: #f7f7f7;
+}
+/* line 66, ../sass/screen.scss */
+.list tr.even:hover {
+  background: #fdfdfd;
+}
+
+/* line 69, ../sass/screen.scss */
+.menu {
+  position: fixed;
+  padding: 0;
+  width: 9em;
+  left: -9em;
+  height: 100%;
+  color: white;
+  background: #222;
+  transition: all 0.2s ease-out;
+}
+/* line 81, ../sass/screen.scss */
+.menu h1 {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  margin-left: 2rem;
+}
+/* line 89, ../sass/screen.scss */
+.menu ul {
+  margin: 0 0 1.5em;
+  padding: 0;
+  font-size: 1em;
+}
+/* line 93, ../sass/screen.scss */
+.menu ul li {
+  list-style: none;
+}
+/* line 95, ../sass/screen.scss */
+.menu ul li a {
+  display: block;
+  position: relative;
+  padding: 0 2rem;
+}
+/* line 99, ../sass/screen.scss */
+.menu ul li a:hover {
+  background: #333;
+  text-decoration: none;
+  color: inherit;
+}
+/* line 103, ../sass/screen.scss */
+.menu ul li a:hover .delete-button {
+  opacity: 1;
+}
+/* line 106, ../sass/screen.scss */
+.menu ul li .delete-button {
+  position: absolute;
+  right: 1em;
+  font-size: 0.8em;
+  padding: 0.25em;
+  opacity: 0;
+  color: #008df0;
+  transition: all 0.2s;
+}
+/* line 115, ../sass/screen.scss */
+.menu ul li .delete-button:hover {
+  color: red;
+}
+/* line 120, ../sass/screen.scss */
+.menu .menu-button {
+  position: absolute;
+  display: inline-block;
+  left: 9em;
+  padding: 0.6em 0.8em;
+  color: #008df0;
+}
+/* line 126, ../sass/screen.scss */
+.menu .menu-button:hover {
+  color: #00518a;
+}
+/* line 129, ../sass/screen.scss */
+.menu .new-list-button {
+  margin: 0.8em 0 0 2rem;
+  font-size: 0.8em;
+}
+/* line 134, ../sass/screen.scss */
+.menu input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: white;
+  padding-left: 2rem;
+  background: #333;
+}
+
+/* line 143, ../sass/screen.scss */
+.show-menu {
+  left: 0;
+}
+
+/* line 147, ../sass/screen.scss */
+footer {
+  color: #333;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 2em 0;
+}

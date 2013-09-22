@@ -1,0 +1,51 @@
+!!!
+%html{"ng-app" => ""}
+  %head
+    %link{:href => "http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{:href => "stylesheets/screen.css", :rel => "stylesheet"}/
+    %script{:src => "//use.typekit.net/xit7djb.js", :type => "text/javascript"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+    %body{"ng-controller" => "MainCtrl"}
+      %nav.menu
+        .menu-button{"ng-click" => "toggleMenu()"}
+          %i.glyphicon.glyphicon-th-list
+        %h1 Lists
+        %ul
+          %li
+            %a{:href => "#", "ng-click" => "selectAll()"} All
+          %li{"ng-repeat" => "list in lists"}
+            %a{:href => "#", "ng-click" => "selectList(list.title)"}
+              {{list.title}}
+              %i.glyphicon.glyphicon-trash.delete-button{"ng-click" => "removeList(list.id)"}
+
+        %form{"ng-submit" => "addList()"}
+          %input#new-list-input{:type => "text", "ng-model" => "newList", :placeholder => "New list title", :required => ""}>
+        %a.btn.btn-primary.new-list-button{:href => "#", "ng-click" => "addList()"}
+          %i.glyphicon.glyphicon-plus
+          Add new list
+
+      .container
+        %header
+          %h1 memular
+        .form-inline.group
+          %form{"ng-submit" => "add()"}
+            %label.sr-only> Word:
+            %input.form-control.word-input{:autofocus => "autofocus", "ng-model" => "word", :placeholder => "Enter a word", :required => "", :type => "text"}>
+            %label.sr-only> Note:
+            %input.form-control.note-input{"ng-model" => "translation", :placeholder => "Enter something to help you remember", :required => "", :type => "text"}>
+            %a{:href => "", "ng-click" => "add()"}
+              %span.glyphicon.glyphicon-plus
+            %input{:type => "submit"}/
+
+        %table.list{"ng-show" => "nodes.length > 0"}
+          %tr{"ng-class-even" => "'even'", "ng-click" => "remove($index, node.id)", "ng-repeat" => "node in nodes"}
+            %td.word {{node.word}}
+            %td.note {{node.translation}}
+      %footer
+        .container
+          %p Built with &hearts; 2013 &mdash; Olle Werme
+      %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+      %script{:src => "https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"}
+      %script{:src => "js/main.js"}

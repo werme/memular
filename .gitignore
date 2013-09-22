@@ -1,0 +1,5 @@
+public/sass
+public/.sass-cache
+db
+*.db
+.DS_STORE
