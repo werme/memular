@@ -84,7 +84,11 @@ function MainCtrl($scope, $http) {
     } else {
       $('.word-input').focus();
     }
-  }
+  };
+
+  $(document).jkey('m',function(){
+      $scope.toggleMenu();
+  });
 
   $scope.selectAll();
   $scope.updateLists();
