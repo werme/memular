@@ -17,7 +17,6 @@ function MainCtrl($scope, $http) {
 
   $scope.selectList = function(title) {
     $scope.currentList = title;
-    toggleListActive();
     $http.get('/list/' + title).success(function(data) {
        $scope.nodes = data;
     });
@@ -38,8 +37,8 @@ function MainCtrl($scope, $http) {
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     }).success(function(data, status, headers, config) {
       $scope.nodes.unshift({ word: data.word,
-                          translation: data.translation,
-                          id: data.id });
+                             translation: data.translation,
+                             id: data.id });
     }).error(function(data, status, headers, config) {});
 
     $scope.word = '';
@@ -62,7 +61,7 @@ function MainCtrl($scope, $http) {
   };
 
   $scope.removeList = function(id) {
-    console.log(id);
+    // TODO: Remove from list right away
     $http({
       method: 'DELETE',
       url: '/list/' + id + '/delete'
@@ -87,14 +86,8 @@ function MainCtrl($scope, $http) {
     }
   };
 
-  var toggleListActive = function() {
-    $scope.lists.forEach(function(list) {
-        console.log(list);
-    });
-  };
-
   $(document).jkey('m',function(){
-      $scope.toggleMenu();
+    $scope.toggleMenu();
   });
 
   $scope.selectAll();
